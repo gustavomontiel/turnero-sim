@@ -9,6 +9,13 @@ const routes: Routes = [
       title: ''
     }
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+    data: {
+      title: ''
+    }
+  },
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: '**', redirectTo: 'auth', pathMatch: 'full' }
 ];
